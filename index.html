@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5830eb4058.js" crossorigin="anonymous"></script>
+</head>
+<body id="gradient">
+    <h1>Generate a CSS Color Gradient Background</h1>
+    <section> 
+        <div class="container">        
+            <p>Enter colors:</p>
+            <div class="colors">    
+                <input id="color1" type="color" name="color1" value="#3F2B96">
+                <input id="color2" type="color" name="color2" value="#A8C0FF">
+            </div>
+            <p>Choose direction:</p>
+            <div class="buttons">
+                <button onclick="setDirection('to top',this)"><i class="fa-solid fa-arrow-up"></i></button>
+                <button onclick="setDirection('to bottom',this)"><i class="fa-solid fa-arrow-down"></i></button>
+                <button onclick="setDirection('to right',this)"><i class="fa-solid fa-arrow-right"></i></button>
+                <button onclick="setDirection('to left',this)"><i class="fa-solid fa-arrow-left"></i></button>
+                <button onclick="setDirection('to top right',this)"><i class="rotate-icon fa-solid fa-arrow-up"></i></button>
+                <button onclick="setDirection('to bottom left',this)"><i class="rotate-icon fa-solid fa-arrow-down"></i></button>
+                <button class="active" onclick="setDirection('to bottom right',this)"><i class="rotate-icon fa-solid fa-arrow-right"></i></button>
+                <button onclick="setDirection('to top left',this)"><i class="rotate-icon fa-solid fa-arrow-left"></i></button>            
+            </div>
+            <div class="generate">
+                <button id="submit" onclick="generateCode()">Generate</button>
+                <button id="random" onclick="generateRandom()">Random</button>
+            </div>
+            <p>CSS Code:</p>
+            <div class="output">                        
+                <textarea id="code" rows="2"></textarea>
+                <button id="copy" onclick="copyText()" value="btnTxt">Copy</button>
+            </div>                      
+        </div>  
+    </section>            
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+*, *::before, *::after {
+    padding : 0;
+    margin: 0;
+    box-sizing : border-box;
+    border: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(to bottom right, #3F2B96, #A8C0FF);     
+    font-size: 16px;  
+}
+
+h1{
+    color: white;
+    text-align: center;
+    padding: 80px
+ }
+
+p {
+    font-weight: 500;
+    text-align: center;
+}
+
+section {
+    display: flex;    
+    align-items: center;    
+    justify-content: center;
+    
+         
+}
+
+.container {        
+    background-color: #ffffff;
+    border: 1px solid transparent; 
+    max-width: 400px;
+    padding: 40px 20px;        
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+      
+}
+
+.colors {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 30px 0 ;
+}
+
+input[type="color"] {
+    appearance: none;
+    background-color: transparent;
+    width: 100px;
+    height: 45px;
+    cursor: pointer; 
+       
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0 ;
+}
+
+.buttons button {
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border: 2px solid #d5d5dc ;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+i {
+    color: #d5d5dc;
+    font-size: 16px;
+}
+
+.rotate-icon {
+    transform: rotate(45deg);
+}
+
+.buttons .active{
+    border: none;
+    background: #4a6ee0;
+    color: #ffffff;
+}
+
+.generate button {
+    padding: 12px 45px;
+    background-color: #4a6ee0;
+    border-radius: 25px;
+    margin: 0 5px 30px 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.output {
+    background-color: #f0f2fc;
+}
+
+#code {
+  width: 100%;
+  resize: none;
+  color: #30304a;
+  background-color: transparent; 
+  padding: 15px 20px;  
+}
+
+#copy {
+    font-size: 14px;
+    background-color: #4a6ee0;
+    color: #ffffff;
+    position: relative;
+    left: 78%;
+    bottom: 8px;
+    border-radius: 3px;
+    padding: 5px;
+    height: 30px;
+    width: 65px;
+    cursor: pointer;        
+}
+
+#code:focus {    
+    outline: 0;
+}
+
