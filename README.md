@@ -1,7 +1,7 @@
-#CSS Gradient Generator
+# CSS Gradient Generator
 A simple generator to create CSS gradients to add as background images
 
-##Key concepts covered:
+### Key concepts covered:
 
 document.getElementById()
 document.querySelector()
