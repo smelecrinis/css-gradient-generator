@@ -9,7 +9,7 @@ body {
     height: 100vh;
     font-family: 'Rubik', sans-serif;
     background: linear-gradient(to bottom right, #3F2B96, #A8C0FF);     
-    font-size: 16px;  
+    font-size: 16px;      
 }
 
 h1{
@@ -26,9 +26,7 @@ p {
 section {
     display: flex;    
     align-items: center;    
-    justify-content: center;
-    
-         
+    justify-content: center;             
 }
 
 .container {        
@@ -37,8 +35,7 @@ section {
     max-width: 400px;
     padding: 40px 20px;        
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-      
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);         
 }
 
 .colors {
@@ -53,8 +50,7 @@ input[type="color"] {
     background-color: transparent;
     width: 100px;
     height: 45px;
-    cursor: pointer; 
-       
+    cursor: pointer;        
 }
 
 .buttons {

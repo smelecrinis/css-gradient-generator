@@ -1,10 +1,10 @@
-let colorOne = document.getElementById("color1");
-let colorTwo = document.getElementById("color2");
+let colorOne = document.getElementById('color1');
+let colorTwo = document.getElementById('color2');
 let currentDirection = 'to bottom right';
-let outputCode = document.getElementById("code");
-let copyBtn = document.getElementById("copy");
-let random = document.getElementById("random");
-let body = document.querySelector("body");
+let outputCode = document.getElementById('code');
+let copyBtn = document.getElementById('copy');
+let random = document.getElementById('random');
+let body = document.querySelector('body');
 
 
 function setDirection(value,_this) {
@@ -17,38 +17,29 @@ function setDirection(value,_this) {
 }
 
 function generateCode() {
-    outputCode.value = "background-image: linear-gradient("+ currentDirection +", "+ colorOne.value +", "+ colorTwo.value +");";
-    body.style.backgroundImage = "linear-gradient("+ currentDirection +", "+ colorOne.value +", "+ colorTwo.value +")";
+    outputCode.value = `background-image: linear-gradient(${currentDirection}, ${colorOne.value}, ${colorTwo.value});`
+    body.style.backgroundImage = `linear-gradient(${currentDirection}, ${colorOne.value}, ${colorTwo.value})`;
 }
 
 function copyText() {
     outputCode.select();
-    document.execCommand("copy");
-    copyBtn.value = "btnTxt";
-    copyBtn.textContent = "Copied";
+    document.execCommand('copy');
+    copyBtn.value = 'btnTxt';
+    copyBtn.innerText = 'Copied';
     
     copyBtn.addEventListener ('click', function handleClick() {
-        let initialText = copyBtn.value;
+        let initialText = 'Copy'
         if (copyBtn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
-        copyBtn.textContent = "Copied";
+        copyBtn.innerText = 'Copied';
         } else {
-        copyBtn.textContent = initialText;
-        }
-    });
-};       
-
-copyBtn.addEventListener ('click', function hanleClick() {
-    const initialText = "Copy";
-    if (copyBtn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
-    copyBtn.textContent = "Copied";
-    } else {
-    copyBtn.textContent = initialText;
-    }
-});
+        copyBtn.innerText = initialText;
+        }        
+    });    
+};
 
 function randomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
+    let letters = '0123456789ABCDEF';
+    let color = '#';
     for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
