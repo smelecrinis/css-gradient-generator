@@ -7,7 +7,7 @@ let random = document.getElementById('random');
 let body = document.querySelector('body');
 
 
-function setDirection(value,_this) {
+const setDirection = (value,_this) => {
     let directions = document.querySelectorAll (".buttons button");
     for(let i of directions){
         i.classList.remove('active');    
@@ -16,28 +16,30 @@ function setDirection(value,_this) {
     currentDirection = value;    
 }
 
-function generateCode() {
+const generateCode = () => {
     outputCode.value = `background-image: linear-gradient(${currentDirection}, ${colorOne.value}, ${colorTwo.value});`
     body.style.backgroundImage = `linear-gradient(${currentDirection}, ${colorOne.value}, ${colorTwo.value})`;
 }
 
-function copyText() {
+const handleClick = () => {
+    let btnTxt = copyBtn.textContent;
+    if (copyBtn.textContent.toLowerCase().includes('copied')) {
+        copyBtn.innerText = btnTxt;
+    } 
+}
+
+const copyText = () => {
     outputCode.select();
     document.execCommand('copy');
-    copyBtn.value = 'btnTxt';
+    let btnTxt = copyBtn.textContent;
     copyBtn.innerText = 'Copied';
-    
-    copyBtn.addEventListener ('click', function handleClick() {
-        let initialText = 'Copy'
-        if (copyBtn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
-        copyBtn.innerText = 'Copied';
-        } else {
-        copyBtn.innerText = initialText;
-        }        
-    });    
+    setTimeout(() => {
+        copyBtn.innerText = btnTxt;
+    }, 500);
+    copyBtn.addEventListener ('click', handleClick);
 };
 
-function randomColor() {
+const randomColor = () => {
     let letters = '0123456789ABCDEF';
     let color = '#';
     for (let i = 0; i < 6; i++) {
@@ -46,7 +48,7 @@ function randomColor() {
     return color;    
 }
 
-function generateRandom() {
+const generateRandom = () => {
     colorOne.value = randomColor();
     colorTwo.value = randomColor();
     generateCode();
