@@ -1,6 +1,8 @@
 # CSS Gradient Generator
 A simple generator to create CSS gradients to add as background images
 
+You can see this [here](https://smelecrinis.github.io/css-gradient-generator/)
+
 ### Key concepts covered:
 
 * document.getElementById()
